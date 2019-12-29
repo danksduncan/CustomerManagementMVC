@@ -11,4 +11,5 @@ namespace MVCPatientApp.Context
     {
         public DbSet<Patient> Patients { get; set; }
     }
+
 }
