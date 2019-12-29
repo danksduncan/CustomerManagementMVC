@@ -103,26 +103,15 @@ namespace MVCPatientApp.Controllers
         [HttpPost]
         public ActionResult Delete(int? id, Patient pat)
         {
-            try
+            Patient patient = new Patient();
+            if (id != null)
             {
-                Patient patient = new Patient();
-                if (ModelState.IsValid)
-                {
-                    if (id == null)
-                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                    patient = db.Patients.Find(id);
-                    if (patient == null)
-                        return HttpNotFound();
-                    db.Patients.Remove(patient);
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-                return View(patient);
+                patient = db.Patients.Find(id);
+                db.Patients.Remove(patient);
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(patient);
         }
     }
 }
