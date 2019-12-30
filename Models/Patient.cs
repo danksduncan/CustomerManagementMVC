@@ -19,7 +19,31 @@ namespace MVCPatientApp.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Enter patient comments")]
-        public string Comments { get; set; }
+        [Required(ErrorMessage = "Enter birthday of patient.")]
+        [DataType(DataType.Date)]
+        public string Birthday { get; set; }
+
+        [Required(ErrorMessage = "Enter email of patient.")]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = "Email Address")]
+        public string EmailAddress { get; set; }
+
+        [Required(ErrorMessage = "Enter phone number of patient.")]
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+
+        [Required(ErrorMessage = "Enter the insurance company of patient.")]
+        [Display(Name = "Insurance Company")]
+        public string InsuranceCompany { get; set; }
+
+        [Required(ErrorMessage = "Enter comments on patient.")]
+        [Display(Name = "Additional Comments")]
+        public string AdditionalComments { get; set; }
+
+        [Required(ErrorMessage = "Enter the current date.")]
+        [DataType(DataType.Date)]
+        [Display(Name = "Today's Date")]
+        public string CurrentDate { get; set; }
     }
 }
