@@ -152,6 +152,9 @@
     <Content Include="Content\mytemplate\images\bg_top2.gif" />
     <Content Include="Content\mytemplate\images\buttons.png" />
     <Content Include="Content\mytemplate\images\button_bg.gif" />
+    <Content Include="Content\mytemplate\images\dr1.png" />
+    <Content Include="Content\mytemplate\images\dr2.png" />
+    <Content Include="Content\mytemplate\images\dr3.png" />
     <Content Include="Content\mytemplate\images\dropcap.png" />
     <Content Include="Content\mytemplate\images\dropcap2.png" />
     <Content Include="Content\mytemplate\images\icon1.jpg" />
@@ -177,6 +180,7 @@
     <Content Include="Content\mytemplate\images\page4_img2.jpg" />
     <Content Include="Content\mytemplate\images\page4_img3.jpg" />
     <Content Include="Content\mytemplate\images\page5_img1.jpg" />
+    <Content Include="Content\mytemplate\images\portallogo.png" />
     <Content Include="Content\mytemplate\images\quot1.png" />
     <Content Include="Content\mytemplate\images\quot2.png" />
     <Content Include="Content\mytemplate\images\slider_bg.png" />
