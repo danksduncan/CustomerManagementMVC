@@ -1,77 +1,76 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_mytemplate.cshtml";
 }
 
-    <body id="page1">
-        <div class="body1">
-            <div class="main">
-                <!--header -->
-                <header>
+<body id="page1">
+    <div class="body1">
+        <div class="main">
+            <!--header -->
+            <header>
+                <div class="wrapper">
+                    <h1><a href="index.html" id="logo">Agrox Agriculture Company</a></h1>
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
+                            <li><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Registration</a></li>
+                            <li><a href="@Url.Action("ViewList", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Patient List</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="slider_bg">
+                    <div class="slider">
+                        <ul class="items">
+                            <li><img src="@Url.Content("~/Content/mytemplate/")images/dr1.png" alt=""></li>
+                            <li><img src="@Url.Content("~/Content/mytemplate/")images/dr2.png" alt=""></li>
+                            <li><img src="@Url.Content("~/Content/mytemplate/")images/dr3.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <!-- / header -->
+            <!-- content -->
+            <article id="content">
+                <div class="wrapper">
+                    <h2>Explore Our Website</h2>
                     <div class="wrapper">
-                        <h1><a href="index.html" id="logo">Agrox Agriculture Company</a></h1>
-                        <nav>
-                            <ul id="menu">
-                                <li class="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)"><a href="index.html">Home</a></li>
+                        <section class="col4">
+                            <h3>Links</h3>
+                            <ul id="icons">
                                 <li><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Patient" }, Request.Url.Scheme)">Registration</a></li>
                                 <li><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Patient" }, Request.Url.Scheme)">Patient List</a></li>
                             </ul>
-                        </nav>
-                    </div>
-                    <div class="slider_bg">
-                        <div class="slider">
-                            <ul class="items">
-                                <li><img src="@Url.Content("~/Content/mytemplate/")images/dr1.png" alt=""></li>
-                                <li><img src="@Url.Content("~/Content/mytemplate/")images/dr2.png" alt=""></li>
-                                <li><img src="@Url.Content("~/Content/mytemplate/")images/dr3.png" alt=""></li>
+                        </section>
+                        <section class="col4 pad_left1">
+                            <h3>About</h3>
+                            <ul id="why_us">
+                                <li><a href="#">This Page</a></li>
                             </ul>
-                        </div>
-                    </div>
-                </header>
-                <!-- / header -->
-                <!-- content -->
-                <article id="content">
-                    <div class="wrapper">
-                        <h2>Explore Our Website</h2>
-                        <div class="wrapper">
-                            <section class="col4">
-                                <h3>Links</h3>
-                                <ul id="icons">
-                                    <li><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Patient" }, Request.Url.Scheme)">Registration</a></li>
-                                    <li><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Patient" }, Request.Url.Scheme)">Patient List</a></li>
-                                </ul>
-                            </section>
-                            <section class="col4 pad_left1">
-                                <h3>About</h3>
-                                <ul id="why_us">
-                                    <li><a href="#">This Page</a></li>
-                                </ul>
-                            </section>
-                            <section class="col3 pad_left2">
-                                <h3>Subscribe To Our Newsletter</h3>
-                                <form id="ContactForm" action="#">
-                                    <div>
-                                        <div class="wrapper">
-                                            <span>Your Name:</span>
-                                            <div class="bg">
-                                                <input type="text" class="input">
-                                            </div>
+                        </section>
+                        <section class="col3 pad_left2">
+                            <h3>Subscribe To Our Newsletter</h3>
+                            <form id="ContactForm" action="#">
+                                <div>
+                                    <div class="wrapper">
+                                        <span>Your Name:</span>
+                                        <div class="bg">
+                                            <input type="text" class="input">
                                         </div>
-                                        <div class="wrapper">
-                                            <span>Your E-mail:</span>
-                                            <div class="bg">
-                                                <input type="text" class="input">
-                                            </div>
-                                        </div>
-                                        <a href="#">Submit</a>
                                     </div>
-                                </form>
-                            </section>
-                        </div>
+                                    <div class="wrapper">
+                                        <span>Your E-mail:</span>
+                                        <div class="bg">
+                                            <input type="text" class="input">
+                                        </div>
+                                    </div>
+                                    <a href="#">Submit</a>
+                                </div>
+                            </form>
+                        </section>
                     </div>
-                </article>
-            </div>
+                </div>
+            </article>
         </div>
-    </body>
+    </div>
+</body>
 
