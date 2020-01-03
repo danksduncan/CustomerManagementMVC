@@ -11,19 +11,19 @@
                 <div class="wrapper">
                     <h1><a href="index.html" id="logo">Agrox Agriculture Company</a></h1>
                     <nav>
-                        <ul id="menu">
-                            <li><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
+                        <ul id="menu" style="padding-top: 60px;">
+                            <li class="active"><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
                             <li><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Registration</a></li>
-                            <li><a href="@Url.Action("ViewList", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Patient List</a></li>
+                            <li><a href="@Url.Action("ViewList", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Admin Portal</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="slider_bg">
                     <div class="slider">
                         <ul class="items">
-                            <li><img src="@Url.Content("~/Content/mytemplate/")images/dr1.png" alt=""></li>
-                            <li><img src="@Url.Content("~/Content/mytemplate/")images/dr2.png" alt=""></li>
-                            <li><img src="@Url.Content("~/Content/mytemplate/")images/dr3.png" alt=""></li>
+                            <li><img src="@Url.Content("~/Content/mytemplate/")images/work1.png" alt=""></li>
+                            <li><img src="@Url.Content("~/Content/mytemplate/")images/work2.png" alt=""></li>
+                            <li><img src="@Url.Content("~/Content/mytemplate/")images/work3.png" alt=""></li>
                         </ul>
                     </div>
                 </div>
@@ -32,20 +32,29 @@
             <!-- content -->
             <article id="content">
                 <div class="wrapper">
-                    <h2>Explore Our Website</h2>
+                    <h2 style=" text-align: center; ">Explore exciting new ways to manage exisiting and new customers through our applications developed to scale your business!</h2>
                     <div class="wrapper">
-                        <section class="col4">
-                            <h3>Links</h3>
-                            <ul id="icons">
-                                <li><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Patient" }, Request.Url.Scheme)">Registration</a></li>
-                                <li><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Patient" }, Request.Url.Scheme)">Patient List</a></li>
-                            </ul>
-                        </section>
-                        <section class="col4 pad_left1">
-                            <h3>About</h3>
-                            <ul id="why_us">
-                                <li><a href="#">This Page</a></li>
-                            </ul>
+                        <section class="col2">
+                            <div class="wrapper">
+                                <section class="col4">
+                                    <h3>Links</h3>
+                                    <ul id="icons">
+                                        <li><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
+                                        <li><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Registration</a></li>
+                                        <li><a href="@Url.Action("ViewList", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Admin Portal</a></li>
+                                    </ul>
+                                </section>
+                                <section class="col4 pad_left1">
+                                    <h3>About</h3>
+                                    <ul id="why_us">
+                                        <li><a href="#">Documentation</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div id="footer_link">
+                                Copyright &copy; <a href="#">Duncan Li Portfolio</a> All Rights Reserved<br>
+                                Design by <a target="_blank" href="http://www.templatemonster.com/">www.duncanli.com/portfolio</a>
+                            </div>
                         </section>
                         <section class="col3 pad_left2">
                             <h3>Subscribe To Our Newsletter</h3>

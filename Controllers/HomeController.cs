@@ -59,5 +59,61 @@ namespace MVCPatientApp.Controllers
             }
         }
 
+        // GET: Patient/Edit/5
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            Patient patient = db.Patients.Find(id);
+            if (patient == null)
+                return HttpNotFound();
+            return View(patient);
+        }
+
+        // POST: Patient/Edit/5
+        [HttpPost]
+        public ActionResult Edit(Patient patient)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Entry(patient).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("ViewList");
+                }
+                return View(patient);
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Patient/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            Patient patient = db.Patients.Find(id);
+            if (patient == null)
+                return HttpNotFound();
+            return View(patient);
+        }
+
+        // POST: Patient/Delete/5
+        [HttpPost]
+        public ActionResult Delete(int? id, Patient pat)
+        {
+            Patient patient = new Patient();
+            if (id != null)
+            {
+                patient = db.Patients.Find(id);
+                db.Patients.Remove(patient);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(patient);
+        }
     }
 }

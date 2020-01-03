@@ -51,10 +51,11 @@ body {
 	width:966px
 }
 .body1 {
-	background:url(../images/bg_top2.gif) top repeat-x #0e0b06
+	background-color: white;
 }
+
 .body2 {
-	background:#1c160d
+	background: #1c160d
 }
 /* main layout */
 a {
