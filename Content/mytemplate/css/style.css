@@ -112,27 +112,27 @@ header {
 	float:left;
 	padding-left:1px
 }
-#menu li a {
-	display:block;
-	font-size:19px;
-	color:#130c04;
-	text-decoration:none;
-	line-height:42px;
-	height:43px;
-	padding:0 19px;
-	border-radius:8px;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	position:relative;
-	background:url(../images/spacer.gif) repeat
-}
-#menu li a:hover, #menu .active a {
-	background:url(../images/menu_bg.gif) bottom repeat-x #92d30f;
-	color:#fff
-}
-#menu li a:hover, #menu .active a {
-	background/*\**/:url(../images/menu_bg.gif) top repeat-x #337f05\9
-}
+	#menu li a {
+		display: block;
+		font-size: 19px;
+		color: #130c04;
+		text-decoration: none;
+		line-height: 42px;
+		height: 43px;
+		padding: 0 19px;
+		border-radius: 8px;
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		position: relative;
+		background-color: #96d8c9;
+	}
+	#menu li a:hover, #menu .active a {
+		background: #9ed896;
+		color: #fff
+	}
+	#menu li a:hover, #menu .active a {
+		background: #9ed896;
+		}
 .slider_bg {
 	width:100%;
 	height:483px;

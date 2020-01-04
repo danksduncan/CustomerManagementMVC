@@ -48,6 +48,7 @@
                                 margin-bottom: 15px;
                                 border-radius: 8px;
                                 background-color: #86d4c3;
+                                color: white;
                                 cursor: pointer;"/>
                                 <style>
                                     #warning {
@@ -101,8 +102,8 @@
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.Birthday)
                                             </td>
-                                            <td id="warning">
-                                                @Html.DisplayFor(modelItem => item.EmailAddress)
+                                            <td>
+                                                @Html.DisplayTextFor(modelItem => item.EmailAddress)
                                             </td>
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.PhoneNumber)
