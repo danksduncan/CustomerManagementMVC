@@ -9,7 +9,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 
 @section scripts
-                            {
+{
     <script>
         $(document).ready(function () {
             $('#tblOne').DataTable();
@@ -35,32 +35,65 @@
         </div>
     </div>
 
-    <div class="body2" style=" background-color: ghostwhite; ">
+    <div class="body2" style="background-color: ghostwhite;">
         <div class="main" style="width: auto">
             <article id="content2" style="margin-right: 10px;">
                 <div class="wrapper">
                     <div class="col-lg-12 col-md-12 col-sm-12">
-                        <h2 style=" color: black; ">Our Customers</h2>
-                            <input type="submit" onmouseover="" onclick="location.href='@Url.Action("Create", "Home")'" value="Create New" class="btn btn-default"
-                                style=" width: 130px;
-                                height: 30px;
+                        <h2 style="color: black;">Our Customers</h2>
+                            <input type="submit" onclick="location.href='@Url.Action("Create", "Home")'" value="Create New" class="btn btn-default"
+                                style=" width: 145px;
+                                height: 40px;
                                 margin-left: 5px;
                                 margin-bottom: 15px;
                                 border-radius: 8px;
-                                background-color: #86d4c3;
+                                background-color: #59b1bf;
                                 color: white;
                                 cursor: pointer;"/>
                                 <style>
-                                    #warning {
-                                        opacity: 1;
-                                        transition: opacity 1s, background 1s;
-                                        background: #86d4c3;
+                                    .editColor {
+                                        color: dimgrey;
+                                    }
+
+                                    .btn-default:hover {
+                                        background-color: #228999 !important;
+                                    }
+
+                                    .dataTables_filter input {
+                                        background: #fff;
+                                        font-family: Times New Roman, Times, serif;
+                                        font-size: 11pt;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                        margin-top: 1px;
+                                        margin-bottom: 1px;
+                                        padding: 3px;
+                                        border-top: 1px solid #CCCCCC;
+                                        border-left: 1px solid #CCCCCC;
+                                        border-right: 1px solid #999999;
+                                        border-bottom: 1px solid #999999;
+                                        width: 200px;
+                                        height: 25px;
+                                        -moz-border-radius: 8px;
+                                        -webkit-border-radius: 8px;
+                                    }
+
+                                    div.dataTables_length select {
+                                        padding: 3px;
+                                        border-top: 1px solid #CCCCCC;
+                                        border-left: 1px solid #CCCCCC;
+                                        border-right: 1px solid #999999;
+                                        border-bottom: 1px solid #999999;
+                                        width: 60px;
+                                        height: 25px;
+                                        -moz-border-radius: 8px;
+                                        -webkit-border-radius: 8px;
                                     }
                                 </style>
 
-                            <table id="tblOne" class="display responsive nowrap">
+                            <table id="tblOne" class="display responsive nowrap" style=" margin-bottom: 10px; padding-top: 10px;">
                                 <thead>
-                                    <tr>
+                                    <tr class= "editColor">
                                         <th>
                                             @Html.DisplayNameFor(model => model.FirstName)
                                         </th>
@@ -88,7 +121,7 @@
                                         <th>Edit Customer</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class = "editColor" style="text-align: center;">
 
                                     @foreach (var item in Model)
                                     {
@@ -117,10 +150,10 @@
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.CurrentDate)
                                             </td>
-                                            <td id="warning">
-                                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                                                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                            <td>
+                                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "editColor" }) |
+                                                @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "editColor" }) |
+                                                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "editColor" })
                                             </td>
                                         </tr>
                                     }

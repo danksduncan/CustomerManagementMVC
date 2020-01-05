@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_mytemplate.cshtml";
 }
 
-<body id="page4" style=" background-color: #96d8c9; ">
+<body id="page4" style=" background-color: ghostwhite; ">
     <div class="body1">
         <div class="main">
             <header>
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="body2" style="background-color: #96d8c9;">
+    <div class="body2" style="background-color: ghostwhite;">
         <div class="main">
             <article id="content2">
                 <div class="wrapper">
@@ -45,7 +45,7 @@
                                 </dt>
 
                                 <dt style="color: black; font-size: large;">
-                                    <b>@Html.DisplayNameFor(model => model.EmailAddress):</b> @Html.DisplayFor(model => model.EmailAddress)
+                                    <b>@Html.DisplayNameFor(model => model.EmailAddress):</b> @Html.DisplayTextFor(model => model.EmailAddress)
                                 </dt>
 
                                 <dt style="color: black; font-size: large;">
@@ -68,21 +68,25 @@
                         <div class="form-group"> 
                             <div class="col-md-offset-2 col-md-10">
                                 <input type="submit" onmouseover="" onclick = "window.print()" value="Print" class="btn btn-default"
-                                    style="        
-                                    width: 130px;
-                                    height: 30px;
-                                    margin-top: 20px;
+                                    style=" width: 145px;
+                                    height: 40px;
                                     margin-left: 5px;
+                                    margin-top: 18px;
+                                    margin-bottom: 15px;
                                     border-radius: 8px;
+                                    background-color: #59b1bf;
+                                    color: white;
                                     cursor: pointer;"/>
                                 <input type="submit" onmouseover="" onclick="location.href='@Url.Action("ViewList", "Home")'" value="Back To List" class="btn btn-default"
-                                    style="
-                                    width: 130px;
-                                    height: 30px;
-                                    margin-top: 20px;
+                                    style=" width: 145px;
+                                    height: 40px;
                                     margin-left: 5px;
+                                    margin-top: 18px;
+                                    margin-bottom: 15px;
                                     border-radius: 8px;
-                                    cursor: pointer;" />
+                                    background-color: #59b1bf;
+                                    color: white;
+                                    cursor: pointer;"/>
                             </div>
                         </div>
                     </div>

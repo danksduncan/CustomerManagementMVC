@@ -59,9 +59,9 @@ body {
 }
 /* main layout */
 a {
-	color:#fff;
-	text-decoration:underline;
-	outline:none
+	color: #fff;
+	text-decoration: underline;
+	outline: none
 }
 a:hover {
 	text-decoration:none
@@ -112,27 +112,27 @@ header {
 	float:left;
 	padding-left:1px
 }
-	#menu li a {
-		display: block;
-		font-size: 19px;
-		color: #130c04;
-		text-decoration: none;
-		line-height: 42px;
-		height: 43px;
-		padding: 0 19px;
-		border-radius: 8px;
-		-moz-border-radius: 8px;
-		-webkit-border-radius: 8px;
-		position: relative;
-		background-color: #96d8c9;
-	}
-	#menu li a:hover, #menu .active a {
-		background: #9ed896;
-		color: #fff
-	}
-	#menu li a:hover, #menu .active a {
-		background: #9ed896;
-		}
+#menu li a {
+	display: block;
+	font-size: 19px;
+	color: #130c04;
+	text-decoration: none;
+	line-height: 42px;
+	height: 43px;
+	padding: 0 19px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	position: relative;
+	background-color: #59b1bf;
+}
+#menu li a:hover, #menu .active a {
+	background: #9ed896;
+	color: #fff
+}
+#menu li a:hover, #menu .active a {
+	background: #228999;
+}
 .slider_bg {
 	width:100%;
 	height:483px;
@@ -428,22 +428,22 @@ footer a:hover {
 	overflow:hidden
 }
 #ContactForm a {
-	float:right;
-	width:94px;
-	height:43px;
-	font-size:18px;
-	color:#fff;
-	text-decoration:none;
-	line-height:42px;
-	text-align:center;
-	background:url(../images/button_bg.gif) top repeat-x #327d05;
-	border-radius:8px;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	position:relative
+	float: right;
+	width: 94px;
+	height: 43px;
+	font-size: 18px;
+	color: #fff;
+	text-decoration: none;
+	line-height: 42px;
+	text-align: center;
+	background: #2699ab;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	position: relative
 }
 #ContactForm a:hover {
-	background:#8dcf0f
+	background: #228999;
 }
 #ContactForm .input {
 	width:307px;
