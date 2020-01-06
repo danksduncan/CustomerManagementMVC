@@ -72,15 +72,21 @@ namespace MVCPatientApp.Controllers
 
         // POST: Patient/Edit/5
         [HttpPost]
-        public ActionResult Edit(Patient patient)
+        public ActionResult Edit(Patient patient, string action)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    db.Entry(patient).State = System.Data.Entity.EntityState.Modified;
-                    db.SaveChanges();
-                    return RedirectToAction("ViewList");
+                    switch (action)
+                    {
+                        case "Save":
+                            db.Entry(patient).State = System.Data.Entity.EntityState.Modified;
+                            db.SaveChanges();
+                            return RedirectToAction("ViewList");
+                        case "Back To List":
+                            return RedirectToAction("ViewList");
+                    }
                 }
                 return View(patient);
             }
@@ -103,15 +109,21 @@ namespace MVCPatientApp.Controllers
 
         // POST: Patient/Delete/5
         [HttpPost]
-        public ActionResult Delete(int? id, Patient pat)
+        public ActionResult Delete(int? id, string action)
         {
             Patient patient = new Patient();
             if (id != null)
             {
-                patient = db.Patients.Find(id);
-                db.Patients.Remove(patient);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                switch (action)
+                {
+                    case "Delete":
+                        patient = db.Patients.Find(id);
+                        db.Patients.Remove(patient);
+                        db.SaveChanges();
+                        return RedirectToAction("ViewList");
+                    case "Back To List":
+                        return RedirectToAction("ViewList");
+                }
             }
             return View(patient);
         }

@@ -8,7 +8,6 @@
     <body id="page4" style=" background-color: ghostwhite;">
         <div class="body1">
             <div class="main">
-                <!--header -->
                 <header>
                     <div class="wrapper">
                         <h1><a href="index.html" id="logo">Agrox Agriculture Company</a></h1>
@@ -21,8 +20,6 @@
                         </nav>
                     </div>
                 </header>
-                <!-- / header -->
-                <!-- content -->
             </div>
         </div>
 
@@ -73,9 +70,29 @@
                                 {
                                     @Html.AntiForgeryToken()
 
-                                    <div class="form-actions no-color">
-                                        <input type="submit" value="Delete" class="btn btn-default" /> |
-                                        @Html.ActionLink("Back to List", "ViewList")
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input name="action" onmouseover="" type="submit" value="Delete" class="btn btn-default"
+                                                   style=" width: 145px;
+                                            height: 40px;
+                                            margin-left: 5px;
+                                            margin-top: 18px;
+                                            margin-bottom: 15px;
+                                            border-radius: 8px;
+                                            background-color: #59b1bf;
+                                            color: white;
+                                            cursor: pointer;" />
+                                            <input name="action" onmouseover="" type="submit" onclick="location.href='@Url.Action("Back to List", "ViewList")'" value="Back To List"
+                                            style=" width: 145px;
+                                            height: 40px;
+                                            margin-left: 5px;
+                                            margin-top: 18px;
+                                            margin-bottom: 15px;
+                                            border-radius: 8px;
+                                            background-color: #59b1bf;
+                                            color: white;
+                                            cursor: pointer;" />
+                                        </div>
                                     </div>
                                 }
                             </div>
@@ -86,7 +103,6 @@
         </div>
 
         <div class="main">
-            <!-- footer -->
             <footer>
                 <div class="col-lg-12" style=" text-align-last: center;">
                     <section>
@@ -96,8 +112,6 @@
                         </div>
                     </section>
                 </div>
-                <!-- {%FOOTER_LINK} -->
             </footer>
-            <!-- / footer -->
         </div>
     </body>
