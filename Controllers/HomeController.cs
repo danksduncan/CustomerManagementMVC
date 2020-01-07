@@ -12,6 +12,7 @@ namespace MVCPatientApp.Controllers
     public class HomeController : Controller
     {
         private PatientContext db = new PatientContext();
+        private SubscriberContext sbdb = new SubscriberContext();
         public ActionResult Index()
         {
             return View(db.Patients.ToList());
@@ -20,6 +21,31 @@ namespace MVCPatientApp.Controllers
         public ActionResult ViewList()
         {
             return View(db.Patients.ToList());
+        }
+
+        [HttpGet]
+        public ActionResult HomePage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult HomePage(Subscribe subscriber)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    sbdb.Subscriber.Add(subscriber);
+                    sbdb.SaveChanges();
+                    return RedirectToAction("ViewList");
+                }
+                return View(subscriber);
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         public ActionResult Details(int? id)
@@ -32,14 +58,12 @@ namespace MVCPatientApp.Controllers
             return View(patient);
         }
 
-        // GET: Patient/Create
         [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Patient/Create
         [HttpPost]
         public ActionResult Create(Patient patient)
         {
@@ -59,7 +83,6 @@ namespace MVCPatientApp.Controllers
             }
         }
 
-        // GET: Patient/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -70,7 +93,6 @@ namespace MVCPatientApp.Controllers
             return View(patient);
         }
 
-        // POST: Patient/Edit/5
         [HttpPost]
         public ActionResult Edit(Patient patient, string action)
         {
@@ -96,7 +118,6 @@ namespace MVCPatientApp.Controllers
             }
         }
 
-        // GET: Patient/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,7 +128,6 @@ namespace MVCPatientApp.Controllers
             return View(patient);
         }
 
-        // POST: Patient/Delete/5
         [HttpPost]
         public ActionResult Delete(int? id, string action)
         {
