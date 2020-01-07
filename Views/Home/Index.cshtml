@@ -6,10 +6,9 @@
 <body id="page1">
     <div class="body1">
         <div class="main">
-            <!--header -->
             <header>
                 <div class="wrapper">
-                    <h1><a href="index.html" id="logo">Agrox Agriculture Company</a></h1>
+                    <h1><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)" id="logo">Agrox Agriculture Company</a></h1>
                     <nav>
                         <ul id="menu" style="padding-top: 60px;">
                             <li class="active"><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
@@ -28,8 +27,6 @@
                     </div>
                 </div>
             </header>
-            <!-- / header -->
-            <!-- content -->
             <article id="content">
                 <div class="wrapper">
                     <h2 style=" text-align: center; ">Explore exciting new ways to manage exisiting and new customers through our applications developed to scale your business!</h2>

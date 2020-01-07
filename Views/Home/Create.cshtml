@@ -39,7 +39,7 @@
         <div class="main">
             <header>
                 <div class="wrapper">
-                    <h1><a href="index.html" id="logo">Agrox Agriculture Company</a></h1>
+                    <h1><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)" id="logo">Agrox Agriculture Company</a></h1>
                     <nav>
                         <ul id="menu" style="padding-top: 60px;">
                             <li><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <div class="body2" style=" background-color: ghostwhite; ">
+    <div class="body2" style="background-color: ghostwhite;">
         <div class="main">
             <article id="content2">
                 <div class="wrapper">
