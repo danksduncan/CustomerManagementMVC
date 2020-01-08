@@ -12,12 +12,12 @@ namespace MVCPatientApp.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Enter your name.")]
-        [Display(Name = "Name")]
+        [Display(Name = "Your Name")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Enter your email.")]
         [DataType(DataType.EmailAddress)]
-        [Display(Name = "Email Address")]
+        [Display(Name = "Your E-mail")]
         public string EmailAddress { get; set; }
     }
 }

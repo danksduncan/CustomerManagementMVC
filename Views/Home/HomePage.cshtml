@@ -5,45 +5,138 @@
     Layout = "~/Views/Shared/_mytemplate.cshtml";
 }
 
-<h2>HomePage</h2>
+    <style type="text/css">
+        .roundedcorner {
+            background: #fff;
+            font-family: Times New Roman, Times, serif;
+            font-size: 11pt;
+            margin-left: 10px;
+            margin-right: auto;
+            margin-top: 1px;
+            padding: 3px;
+            border-top: 1px solid #CCCCCC;
+            border-left: 1px solid #CCCCCC;
+            border-right: 1px solid #999999;
+            border-bottom: 1px solid #999999;
+            width: 300px;
+            height: 18px;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+        }
+
+        .roundedcornerspace {
+            background: #fff;
+            font-family: Times New Roman, Times, serif;
+            font-size: 11pt;
+            margin-left: 15px;
+            margin-right: auto;
+            margin-top: 1px;
+            margin-bottom: 3px;
+            padding: 3px;
+            border-top: 1px solid #CCCCCC;
+            border-left: 1px solid #CCCCCC;
+            border-right: 1px solid #999999;
+            border-bottom: 1px solid #999999;
+            width: 300px;
+            height: 18px;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+        }
+    </style>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Subscribe</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
+    <body id="page1">
+        <div class="body1">
+            <div class="main">
+                <header>
+                    <div class="wrapper">
+                        <h1><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)" id="logo">Agrox Agriculture Company</a></h1>
+                        <nav>
+                            <ul id="menu" style="padding-top: 60px;">
+                                <li class="active"><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
+                                <li><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Registration</a></li>
+                                <li><a href="@Url.Action("ViewList", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Admin Portal</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="slider_bg">
+                        <div class="slider">
+                            <ul class="items">
+                                <li><img src="@Url.Content("~/Content/mytemplate/")images/work1.png" alt=""></li>
+                                <li><img src="@Url.Content("~/Content/mytemplate/")images/work2.png" alt=""></li>
+                                <li><img src="@Url.Content("~/Content/mytemplate/")images/work3.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+                <article id="content">
+                    <div class="wrapper">
+                        <h2 style=" text-align: center; ">Explore exciting new ways to manage exisiting and new customers through our applications developed to scale your business!</h2>
+                        <div class="wrapper">
+                            <section class="col2" style="margin-left: 10px;">
+                                <div class="wrapper">
+                                    <section class="col4">
+                                        <h3>Links</h3>
+                                        <ul id="icons">
+                                            <li><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
+                                            <li><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Registration</a></li>
+                                            <li><a href="@Url.Action("ViewList", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Admin Portal</a></li>
+                                        </ul>
+                                    </section>
+                                    <section class="col4 pad_left1">
+                                        <h3>About</h3>
+                                        <ul id="why_us">
+                                            <li><a href="#">Documentation</a></li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </section>
+                            <section class="col3 pad_left2" style="margin-left: 10px;">
+                                <h3>Subscribe To Our Newsletter</h3>
+                                <form id="ContactForm" action="#">
+                                    <div>
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "roundedcornerspace" } })
+                                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.EmailAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            @Html.EditorFor(model => model.EmailAddress, new { htmlAttributes = new { @class = "roundedcorner" } })
+                                            @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-10">
+                                                <input type="submit" value="Create" class="btn btn-default" 
+                                                    style=" width: 125px;
+                                                    height: 35px;
+                                                    margin-left: 269px;
+                                                    margin-top: 5px;
+                                                    margin-bottom: 15px;
+                                                    border-radius: 8px;
+                                                    background-color: #59b1bf;
+                                                    color: white;
+                                                    cursor: pointer;"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                            <section>
+                                <div id="footer_link" style=" text-align-last: center;">
+                                    Copyright &copy; <a href="duncanli.com/portfolio">Duncan Li Portfolio</a> All Rights Reserved<br>
+                                    Design by <a target="_blank" href="duncanli.com/portfolio">www.duncanli.com/portfolio</a>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EmailAddress, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.EmailAddress, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    </body>
 }
