@@ -13,10 +13,6 @@ namespace MVCPatientApp.Controllers
     {
         private PatientContext db = new PatientContext();
         private SubscriberContext sbdb = new SubscriberContext();
-        public ActionResult Index()
-        {
-            return View(db.Patients.ToList());
-        }
 
         public ActionResult ViewList()
         {
