@@ -13,6 +13,7 @@ namespace MVCPatientApp.Controllers
     {
         private PatientContext db = new PatientContext();
         private SubscriberContext sbdb = new SubscriberContext();
+        //Made new changes
 
         public ActionResult ViewList()
         {
