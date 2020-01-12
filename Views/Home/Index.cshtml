@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_mytemplate.cshtml";
+}
+
+<body id="page1">
+    <div class="body1">
+        <div class="main">
+            <header>
+                <div class="wrapper">
+                    <h1><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)" id="logo">Agrox Agriculture Company</a></h1>
+                    <nav>
+                        <ul id="menu" style="padding-top: 60px;">
+                            <li class="active"><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
+                            <li><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Registration</a></li>
+                            <li><a href="@Url.Action("ViewList", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Admin Portal</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="slider_bg">
+                    <div class="slider">
+                        <ul class="items">
+                            <li><img src="@Url.Content("~/Content/mytemplate/")images/work1.png" alt=""></li>
+                            <li><img src="@Url.Content("~/Content/mytemplate/")images/work2.png" alt=""></li>
+                            <li><img src="@Url.Content("~/Content/mytemplate/")images/work3.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <article id="content">
+                <div class="wrapper">
+                    <h2 style=" text-align: center; ">Explore exciting new ways to manage exisiting and new customers through our applications developed to scale your business!</h2>
+                    <div class="wrapper">
+                        <section class="col2">
+                            <div class="wrapper">
+                                <section class="col4">
+                                    <h3>Links</h3>
+                                    <ul id="icons">
+                                        <li><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
+                                        <li><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Registration</a></li>
+                                        <li><a href="@Url.Action("ViewList", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Admin Portal</a></li>
+                                    </ul>
+                                </section>
+                                <section class="col4 pad_left1">
+                                    <h3>About</h3>
+                                    <ul id="why_us">
+                                        <li><a href="#">Documentation</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </section>
+                        <section class="col3 pad_left2">
+                            <h3>Subscribe To Our Newsletter</h3>
+                            <form id="ContactForm" action="#">
+                                <div>
+                                    <div class="wrapper">
+                                        <span>Your Name:</span>
+                                        <div class="bg">
+                                            <input type="text" class="input">
+                                        </div>
+                                    </div>
+                                    <div class="wrapper">
+                                        <span>Your E-mail:</span>
+                                        <div class="bg">
+                                            <input type="text" class="input">
+                                        </div>
+                                    </div>
+                                    <a href="#">Submit</a>
+                                </div>
+                            </form>
+                        </section>
+                        <section>
+                            <div id="footer_link" style=" text-align-last: center;">
+                                Copyright &copy; <a href="duncanli.com/portfolio">Duncan Li Portfolio</a> All Rights Reserved<br>
+                                Design by <a target="_blank" href="duncanli.com/portfolio">www.duncanli.com/portfolio</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,117 @@
+﻿@model MVCPatientApp.Models.Patient
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_mytemplate.cshtml";
+}
+
+    <body id="page4" style=" background-color: ghostwhite;">
+        <div class="body1">
+            <div class="main">
+                <header>
+                    <div class="wrapper">
+                        <h1><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)" id="logo">Agrox Agriculture Company</a></h1>
+                        <nav>
+                            <ul id="menu" style="padding-top: 60px;">
+                                <li><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Home</a></li>
+                                <li class="active"><a href="@Url.Action("Create", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Registration</a></li>
+                                <li><a href="@Url.Action("ViewList", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">Admin Portal</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <div class="body2" style="background-color: ghostwhite;">
+            <div class="main">
+                <article id="content2">
+                    <div class="wrapper">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <h2 style=" color: black; ">Are you sure you want to delete this customer?</h2>
+                            <div>
+                                <h4 style="color: maroon;">All information in database will be cleared.</h4>
+                                <hr />
+                                <dl class="dl-horizontal">
+                                    <dt style="color: black; font-size: large;">
+                                        <b>@Html.DisplayNameFor(model => model.FirstName):</b> @Html.DisplayFor(model => model.FirstName)
+                                    </dt>
+
+                                    <dt style="color: black; font-size: large;">
+                                        <b>@Html.DisplayNameFor(model => model.LastName):</b> @Html.DisplayFor(model => model.LastName)
+                                    </dt>
+
+                                    <dt style="color: black; font-size: large;">
+                                        <b>@Html.DisplayNameFor(model => model.Birthday):</b> @Html.DisplayFor(model => model.Birthday)
+                                    </dt>
+
+                                    <dt style="color: black; font-size: large;">
+                                        <b>@Html.DisplayNameFor(model => model.EmailAddress):</b> @Html.DisplayTextFor(model => model.EmailAddress)
+                                    </dt>
+
+                                    <dt style="color: black; font-size: large;">
+                                        <b>@Html.DisplayNameFor(model => model.PhoneNumber):</b> @Html.DisplayFor(model => model.PhoneNumber)
+                                    </dt>
+
+                                    <dt style="color: black; font-size: large;">
+                                        <b>@Html.DisplayNameFor(model => model.InsuranceCompany):</b> @Html.DisplayFor(model => model.InsuranceCompany)
+                                    </dt>
+
+                                    <dt style="color: black; font-size: large;">
+                                        <b>@Html.DisplayNameFor(model => model.AdditionalComments):</b> @Html.DisplayFor(model => model.AdditionalComments)
+                                    </dt>
+
+                                    <dt style="color: black; font-size: large;">
+                                        <b>Last Updated :</b> @Html.DisplayFor(model => model.CurrentDate)
+                                    </dt>
+                                </dl>
+
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input name="action" onmouseover="" type="submit" value="Delete" class="btn btn-default"
+                                                   style=" width: 145px;
+                                            height: 40px;
+                                            margin-left: 5px;
+                                            margin-top: 18px;
+                                            margin-bottom: 15px;
+                                            border-radius: 8px;
+                                            background-color: #59b1bf;
+                                            color: white;
+                                            cursor: pointer;" />
+                                            <input name="action" onmouseover="" type="submit" onclick="location.href='@Url.Action("Back to List", "ViewList")'" value="Back To List"
+                                            style=" width: 145px;
+                                            height: 40px;
+                                            margin-left: 5px;
+                                            margin-top: 18px;
+                                            margin-bottom: 15px;
+                                            border-radius: 8px;
+                                            background-color: #59b1bf;
+                                            color: white;
+                                            cursor: pointer;" />
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="main">
+            <footer>
+                <div class="col-lg-12" style=" text-align-last: center;">
+                    <section>
+                        <div id="footer_link" style=" color: black; ">
+                            Copyright &copy; Duncan Li Portfolio All Rights Reserved<br>
+                            www.duncanli.com/portfolio
+                        </div>
+                    </section>
+                </div>
+            </footer>
+        </div>
+    </body>
