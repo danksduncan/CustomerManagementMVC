@@ -11,7 +11,7 @@ namespace MVCPatientApp.Models
         [Required]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Enter your name. ")]
+        [Required(ErrorMessage = "Enter your name.")]
         [Display(Name = "Your Name")]
         public string Name { get; set; }
 
